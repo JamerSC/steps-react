@@ -7,21 +7,35 @@ const messages = [
 ];
 
 export default function App() {
+  return (
+    <div>
+      <Steps />
+      <Steps />
+    </div>
+  );
+}
+
+function Steps() {
   // useState method
   const [step, setStep] = useState(1);
   const [isOpen, setIsOpen] = useState(true); // is false components will hide
 
   function handlePrevious() {
-    if (step > 1) setStep(step - 1);
+    //if (step > 1) setStep(step - 1);
+    if (step > 1) setStep((s) => s - 1);
   }
 
   function handleNext() {
-    if (step < 3) setStep(step + 1);
+    if (step < 3) {
+      //setStep((step + 1));
+      //setStep((s) => s + 1);
+      setStep((s) => s + 1);
+    }
   }
 
   return (
-    <>
-      <button className="close" onClick={() => setIsOpen(!isOpen)}>
+    <div>
+      <button className="close" onClick={() => setIsOpen((is) => !is)}>
         &times;
       </button>
 
@@ -55,6 +69,6 @@ export default function App() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

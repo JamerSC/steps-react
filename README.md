@@ -1,10 +1,12 @@
 - Section 6: State, Events, and Forms: Interactive Components
 
 - March 9, 2025
+
 - Section Overview
 - Build a steps components
 
 - March 10, 2025
+
 - Handling Events the React Way
 - What is State in React?
 - Data that a component can hold over time, necessary for info that it neeeds to remember throughout the appp's lifecycle.
@@ -23,6 +25,7 @@
 - React is all about immutability
 
 - March 11, 2025
+
 - The Mechanics of State
 
 1. It was developed by Facebook and has gained massive adoption within the web development community due to its simplicity, performance, and reusability. React follows a Declarative programming paradigm, which is a fundamental concept that makes it easier to build complex user interfaces efficiently.
@@ -33,3 +36,26 @@
 - Adding Another Piece of State
 - React Developer Tools https://react.dev/learn/react-developer-tools
 - https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en&pli=1
+
+-March 12, 2025
+
+- Updating State Based on Current State
+- More Thoughts About State + State Guidelines
+
+1. One component, One State - each component has & manages its own state, no matter how many times we render the same component.Each state is Isolated in one component
+2. UI as FXN of STATE UI = f(state), with state we view UI as a reflection of data changing over time.
+
+- Practical Guidelines about State
+
+1. Use state variable for any data that component should keep track of ("remember")
+   over time.
+2. Whenever you want something in the component to be dynamic, create a piece of state related to that "thing", & update the state when the "thing" should change (aka "be dynamic")
+
+- Example. window isOpen = True else False
+
+3. Update its state this usually happend in an event handler function.
+4. Building a component, imagine its view as reflection of state changing over time.
+5. For data that should not trigger component re-renders, dont use state. Use regular variable instead. This is common beginner mistake.
+
+- A Vanilla JavaScript Implementation
+- CHALLENGE #1: Date Counter (v1)
